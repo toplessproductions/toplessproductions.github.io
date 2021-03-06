@@ -89,7 +89,7 @@
         <h2>2010</h2>
         <h3>טופסת</h3>
         <span class="trophy" alt="Best Film from Tel-Aviv" title="Best Film from Tel-Aviv">🏆</span>
-        <span class="trophy" alt="Best Script" title="Best Script">🏆</span>>
+        <span class="trophy" alt="Best Script" title="Best Script">🏆</span>
         <span class="trophy" alt="Audience Award" title="Audience Award">🏆</span>
         <object width="640" height="385"st><param name="movie" value="https://www.youtube.com/v/Rj6jMGor8bg?fs=1&amp;hl=en_GB&amp;cc_load_policy=1"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="https://www.youtube.com/v/Rj6jMGor8bg?fs=1&amp;hl=en_GB" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="640" height="385"></embed></object>
         <!--
@@ -98,7 +98,7 @@
         
         <h2>2008</h2>
         <h3>סוף לרומן</h3>
-        <img class="trophy" alt="Noa Tishbi Award - Best Film with 80's Vibe" title="Noa Tishbi Award - Best Film with 80's Vibe"/>
+        <span class="trophy" alt="Noa Tishbi Award - Best Film with 80's Vibe" title="Noa Tishbi Award - Best Film with 80's Vibe">🏆</span>
         
         <object width="425" height="344"><param name="movie" value="https://www.youtube.com/v/1-eX_NMm8O8&amp;hl=en_US&amp;fs=1?rel=0&amp;color1=0x3a3a3a&amp;color2=0x999999"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="https://www.youtube.com/v/1-eX_NMm8O8&amp;hl=en_US&amp;fs=1?rel=0&amp;color1=0x3a3a3a&amp;color2=0x999999" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="425" height="344"></embed></object>
         
@@ -121,6 +121,25 @@
             See more: <a href="https://www.youtube.com/user/TopLessProd">Top Less Productions On Youtube</a>
         </p>
     </div>
-    
+    <script>
+	function changeFavicon(text) {
+	  const canvas = document.createElement('canvas');
+	  canvas.height = 64;
+	  canvas.width = 64;
+	  const ctx = canvas.getContext('2d');
+	  ctx.font = '64px serif';
+	  ctx.fillText(text, 0, 64);
+
+	  const link = document.createElement('link');
+	  const oldLinks = document.querySelectorAll('link[rel="shortcut icon"]');
+	  oldLinks.forEach(e => e.parentNode.removeChild(e));
+	  link.id = 'dynamic-favicon';
+	  link.rel = 'shortcut icon';
+	  link.href = canvas.toDataURL();
+	  document.head.appendChild(link);
+	}
+
+	changeFavicon('🎬');
+	</script>
 </body>
 </html>
